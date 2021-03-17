@@ -70,5 +70,17 @@ function generatePassword() {
   if(includeSpecialChars){
     userSelection = userSelection.concat(specialChars)
   }
+
+
+  //Now we create the code for the creation of our password by using our cutom array provided by the variable "userSelection" 
+  var thePassword = "";
+
+  for(var i = 0; i < length; i++){
+    thePassword = thePassword + userSelection[Math.floor(Math.random() * userSelection.length)];
+  }
+
+  //And of course, at the end, return the value of thePassword
+  return thePassword
+
 }
 
